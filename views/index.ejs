@@ -1,0 +1,19 @@
+<% layout('layout') %>
+
+<h1>Все новости</h1>
+
+<div class="row g-3">
+  <% news.forEach((item, index) => { %>
+  <div class="col col-md-6 col-lg-4">
+    <div class="card">
+      <img src="<%= item.image %>" class="card-img-top" />
+
+      <div class="card-body">
+        <h5 class="card-title"><%= item.title %></h5>
+        <p class="card-text"><%= item.text.substring(0, 100) + '...' %></p>
+        <a href="/<%= index %>" class="btn btn-primary">Открыть</a>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+</div>
