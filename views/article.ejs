@@ -1,9 +1,20 @@
 <% layout('layout') %>
 
 <a href="/">Наверх</a>
+<br /><br />
+
+<% if (prev !== -1) { %>
+<a href="<%= prev %>">Предыдущая</a>
+<% } %> <% if (next !== -1) { %>
+<a href="<%= next %>" style="float: right">Следующая</a>
+<% } else { %>
+<span style="float: right">Новостей больше нет</span>
+<% } %>
+
+<br /><br />
 
 <h1><%= title %></h1>
 <br />
 <img src="<%= image %>" width="500" style="float: left; padding-right: 20px" />
 
-<p><%= text %></p>
+<p style="font-size: 20px"><%= text %></p>

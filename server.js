@@ -30,5 +30,9 @@ app.get("/", (req, res) => {
 app.get("/:index", (req, res) => {
   let { index } = req.params;
   index = Number(index);
-  res.render("article", { ...news[index] });
+  res.render("article", {
+    ...news[index],
+    prev: index > 0 ? index - 1 : -1,
+    next: index < news.length - 1 ? index + 1 : -1,
+  });
 });
