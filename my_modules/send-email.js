@@ -27,6 +27,10 @@ const message = {
       path: path.join(__dirname, "../files/image.png"),
       cid: "123",
     },
+    {
+      filename: "resume-sample.pdf",
+      path: path.join(__dirname, "../files/resume-sample.pdf"),
+    },
   ],
 };
 
